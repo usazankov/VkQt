@@ -5,6 +5,8 @@
 #include <QObject>
 #include <QDebug>
 #include "vkqt_global.h"
+#include "vkparser.h"
+#include <QJsonObject>
 class VKQTSHARED_EXPORT VkReply : public QObject
 {
     Q_OBJECT

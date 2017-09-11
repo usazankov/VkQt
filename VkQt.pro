@@ -30,7 +30,8 @@ SOURCES += \
     vkreply.cpp \
     vkmanager.cpp \
     methods/vkusers.cpp \
-    methods/vkfriends.cpp
+    methods/vkfriends.cpp \
+    vkparser.cpp
 
 HEADERS += \
         vkqt.h \
@@ -39,7 +40,8 @@ HEADERS += \
     vkmanager.h \
     vkreply.h \
     methods/vkusers.h \
-    methods/vkfriends.h
+    methods/vkfriends.h \
+    vkparser.h
 
 unix {
     target.path = /usr/lib

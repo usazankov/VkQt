@@ -16,7 +16,8 @@ void VkReply::receivedReply(QNetworkReply * r)
         qDebug()<<"ERROR!";
     }
     else {
-        qDebug()<<"buf_size="<<r->readAll();
+        QJsonObject obj = vkqt::parse(r->readAll());
+        qDebug()<<"obj="<<obj.value(obj.keys().at(0)).toString();
     }
     r->deleteLater();
 }
