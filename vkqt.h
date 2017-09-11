@@ -9,12 +9,16 @@
 class VKQTSHARED_EXPORT VkQt
 {
 public:
-    static VkReply *execute(VKRequest * req);
-    static VkUsers users;
-    static VkFriends friends;
+    VkReply *execute(VKRequest * req);
+    static VkQt *instance();
+    VkUsers *users();
+    VkFriends *friends();
     virtual ~VkQt();
 private:
-    static VkManager manager;
+    static VkQt *_self;
+    VkManager *manager;
+    VkUsers * us;
+    VkFriends * fr;
     VkQt();
     VkQt(const VkQt& root);
     VkQt& operator=(const VkQt&);
