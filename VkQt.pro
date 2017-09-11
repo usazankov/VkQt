@@ -29,7 +29,8 @@ SOURCES += \
     vkrequest.cpp \
     vkreply.cpp \
     vkmanager.cpp \
-    methods/vkusers.cpp
+    methods/vkusers.cpp \
+    methods/vkfriends.cpp
 
 HEADERS += \
         vkqt.h \
@@ -37,7 +38,8 @@ HEADERS += \
     vkrequest.h \
     vkmanager.h \
     vkreply.h \
-    methods/vkusers.h
+    methods/vkusers.h \
+    methods/vkfriends.h
 
 unix {
     target.path = /usr/lib

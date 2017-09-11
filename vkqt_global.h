@@ -11,7 +11,7 @@
 
 namespace vkqt
 {
-const static QUrl apiUrl("https://mail.ru");
+const static QUrl apiUrl("https://api.vk.com/method/");
 //Commons
 const static QString USER_ID = "user_id";
 const static QString USER_IDS = "user_ids";

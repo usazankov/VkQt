@@ -3,11 +3,15 @@
 
 #include "vkqt_global.h"
 #include "vkmanager.h"
+#include "methods/vkusers.h"
+#include "methods/vkfriends.h"
 #include <iostream>
 class VKQTSHARED_EXPORT VkQt
 {
 public:
     static VkReply *execute(VKRequest * req);
+    static VkUsers users;
+    static VkFriends friends;
     virtual ~VkQt();
 private:
     static VkManager manager;

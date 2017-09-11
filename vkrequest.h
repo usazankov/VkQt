@@ -10,7 +10,17 @@ class VKQTSHARED_EXPORT VKRequest
 {
 public:
     explicit VKRequest();
-    explicit VKRequest(const QString &method, const QVariantMap &args);
+    explicit VKRequest(const QString &method, const QVariantMap &args = QVariantMap());
+    VKRequest(const VKRequest& req);
+    VKRequest& operator =(const VKRequest& req)
+    {
+        if(request != nullptr)
+        {
+            delete request;
+        }
+        request = new QNetworkRequest(*req.request);
+        return *this;
+    }
     virtual QNetworkRequest * Request();
     ~VKRequest();
 private:
