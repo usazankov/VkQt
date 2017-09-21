@@ -12,12 +12,15 @@ VkReply::~VkReply()
 
 void VkReply::receivedReply(QNetworkReply * r)
 {
-    if (r->error() != QNetworkReply::NoError) {
+    if (r->error() != QNetworkReply::NoError)
+    {
         qDebug()<<"ERROR!";
     }
-    else {
+    else
+    {
         QJsonObject obj = vkqt::parse(r->readAll());
         qDebug()<<"obj="<<obj.value(obj.keys().at(0)).toString();
+        emit resultReady(obj);
     }
     r->deleteLater();
 }

@@ -6,6 +6,7 @@
 #include <QUrlQuery>
 #include "vkqt_global.h"
 #include <QDebug>
+#include <QSslConfiguration>
 class VKQTSHARED_EXPORT VKRequest
 {
 public:

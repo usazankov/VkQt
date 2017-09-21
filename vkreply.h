@@ -14,7 +14,7 @@ public:
     VkReply(QNetworkReply* pnr = 0);
     virtual ~VkReply();
 signals:
-    void resultReady(const QVariantMap &variables);
+    void resultReady(const QJsonObject &object);
     void error(int code);
 public slots:
     void receivedReply(QNetworkReply * r);
