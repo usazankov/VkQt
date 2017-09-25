@@ -3,6 +3,7 @@
 
 #include <QtCore/qglobal.h>
 #include <QUrl>
+#include "utils.h"
 #if defined(VKQT_LIBRARY)
 #  define VKQTSHARED_EXPORT Q_DECL_EXPORT
 #else
@@ -12,6 +13,7 @@
 namespace vkqt
 {
 const static QUrl apiUrl("https://api.vk.com/method/");
+const static QUrl authUrl("http://api.vk.com/oauth/authorize");
 //Commons
 const static QString USER_ID = "user_id";
 const static QString USER_IDS = "user_ids";
